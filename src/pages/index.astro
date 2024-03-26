@@ -6,30 +6,50 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="Welcome to Astro.">
-	<Container>
-		<div class="h-[100svh] grid place-items-center content-center gap-5 md:gap-8 animate-fade-up animate-duration-800">
-			<Image src="/stars.svg" alt="" width="400" height="400" loading='eager' class="max-md:max-w-[250px]"/>
-			<h1 class="text-4xl md:text-5xl text-center leading-snug">Corporate website done with Astro</h1>
-			<p class="text-content text-center text-lg">Astro is a static site generator made for static websites. <br/>This site built with Astro.build and TailwindCSS.</p>
+  <Container>
+    <div
+      class="animate-duration-800 grid h-[100svh] animate-fade-up place-items-center content-center gap-5 md:gap-8"
+    >
+      <Image
+        src="/stars.svg"
+        alt=""
+        width="400"
+        height="400"
+        loading="eager"
+        class="max-md:max-w-[250px]"
+      />
+      <h1 class="text-center text-4xl leading-snug md:text-5xl">
+        Corporate website done with Astro
+      </h1>
+      <p class="text-content text-center text-lg">
+        Astro is a static site generator made for static websites. <br />This
+        site built with Astro.build and TailwindCSS.
+      </p>
 
-			<div class="flex justify-center items-stretch gap-3 flex-wrap px-4">
-				<a href="" type="button" class="btn btn-active btn-neutral btn-lg rounded-full px-10 max-sm:w-full">
-					<span aria-hidden="true">
-						<Icon name="cloud-download"/>
-					</span>
-					<span>
-						Download for free
-					</span>
-				</a>
-				<a href="https://github.com/H-ymt/astro-template-daisyui" target="_blank" rel="noopener noreferrer" type="button" class="btn btn-active btn-lg rounded-full px-10 max-sm:w-full">
-					<span aria-hidden="true">
-						<Icon name="github" />
-					</span>
-					<span>
-						View on GitHub
-					</span>
-				</a>
-			</div>
-		</div>
-	</Container>
+      <div class="flex flex-wrap items-stretch justify-center gap-3 px-4">
+        <a
+          href=""
+          type="button"
+          class="btn btn-neutral btn-active btn-lg rounded-full px-10 max-sm:w-full"
+        >
+          <span aria-hidden="true">
+            <Icon name="cloud-download" />
+          </span>
+          <span> Download for free </span>
+        </a>
+        <a
+          href="https://github.com/H-ymt/astro-template-daisyui"
+          target="_blank"
+          rel="noopener noreferrer"
+          type="button"
+          class="btn btn-active btn-lg rounded-full px-10 max-sm:w-full"
+        >
+          <span aria-hidden="true">
+            <Icon name="github" />
+          </span>
+          <span> View on GitHub </span>
+        </a>
+      </div>
+    </div>
+  </Container>
 </Layout>
