@@ -8,10 +8,28 @@
 @layer base {
   html,
   body {
-    @apply font-montserrat h-full w-full;
+    @apply h-full w-full font-montserrat;
   }
 
   h1 {
     @apply font-bold;
+  }
+
+  h2 {
+    @apply text-[clamp(2rem,6vw,3rem)] font-bold leading-tight;
+  }
+
+  p {
+    @apply text-neutral;
+  }
+
+  a {
+    @apply text-primary;
+  }
+}
+
+@layer components {
+  .section-outer {
+    @apply py-10 md:py-14;
   }
 }

@@ -18,18 +18,31 @@ import { Image } from 'astro:assets';
         loading="eager"
         class="max-md:max-w-[250px]"
       />
-      <h1 class="text-center text-4xl leading-snug md:text-5xl">
-        Corporate website done with Astro
+      <h1 class="text-center text-5xl md:text-[54px]">
+        Corporate website <span class="inline-block">done with Astro</span>
       </h1>
       <p class="text-content text-center text-lg">
         Astro is a static site generator made for static websites. <br />This site
-        built with Astro.build and TailwindCSS.
+        built with Astro.build <a
+          class="inline-flex items-center gap-1"
+          href="https://tailwindcss.com/"
+          target="_blank"
+        >
+          <span>Tailwind CSS</span>
+          <Icon name="link-out" class="inline" />
+        </a> and <a
+          class="inline-flex items-center gap-1"
+          href="https://daisyui.com/"
+          target="_blank"
+        >
+          <span>daisyUI</span>
+          <Icon name="link-out" class="inline" /></a
+        >.
       </p>
 
       <div class="flex flex-wrap items-stretch justify-center gap-3 px-4">
         <a
           href=""
-          type="button"
           class="btn btn-neutral btn-active btn-lg rounded-full px-10 max-sm:w-full"
         >
           <span aria-hidden="true">
@@ -41,15 +54,101 @@ import { Image } from 'astro:assets';
           href="https://github.com/H-ymt/astro-template-daisyui"
           target="_blank"
           rel="noopener noreferrer"
-          type="button"
           class="btn btn-active btn-lg rounded-full px-10 max-sm:w-full"
         >
           <span aria-hidden="true">
             <Icon name="github" />
           </span>
-          <span> View on GitHub </span>
+          <span>View on GitHub </span>
         </a>
       </div>
     </div>
+
+    <section class="section-outer pt-0">
+      <h2 class="pb-3">What is Astro?</h2>
+      <div class="grid gap-3">
+        <p>
+          Astro is a new JavaScript framework that makes it easy to build fast,
+          flexible websites.
+        </p>
+
+        <p>
+          It uses a static site generator to build your website, which means that
+          your pages are pre-rendered and served to users instantly.
+        </p>
+      </div>
+
+      <div>
+        <div></div>
+      </div>
+    </section>
+
+    <section class="section-outer">
+      <h2 class="pb-3">Can make beautiful websites faster</h2>
+      <p>
+        This website uses daisyUI. daisyUI is the most popular component library for
+        Tailwind CSS.
+      </p>
+
+      <div class="pt-8">
+        <h3 class="pb-3 text-2xl font-bold">Features of daisyUI</h3>
+        <div class="max-w-4xl">
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-b border-base-300 bg-neutral text-neutral-content"
+          >
+            <div class="collapse-title text-lg font-medium md:text-xl">
+              There is no need to add many classes
+            </div>
+            <div class="collapse-content">
+              <p class="text-neutral-content">
+                With daisyUI, you write 80% fewer class names And your HTML size will
+                be about 70% smaller.
+              </p>
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-b border-base-300 bg-neutral text-neutral-content"
+          >
+            <div class="collapse-title text-lg font-medium md:text-xl">
+              Easy to customize
+            </div>
+            <div class="collapse-content">
+              <p class="text-neutral-content">
+                daisyUI is built on top of Tailwind CSS so you can customize
+                everything using utility classes.
+              </p>
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-b border-base-300 bg-neutral text-neutral-content"
+          >
+            <div class="collapse-title text-lg font-medium md:text-xl">
+              Unlimited themes with zero effort
+            </div>
+            <div class="collapse-content">
+              <p class="text-neutral-content">
+                Using daisyUI color names, you get Dark Mode and even more themes
+                without adding a new class name.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid place-items-center gap-4 rounded-xl bg-primary/10 p-10">
+        <h2 class="text-4xl">Astro + Tailwind CSS</h2>
+        <p class="text-center">
+          Build fast websites with the next generation static site generator
+        </p>
+        <a href="" class="btn btn-neutral btn-md mt-2 rounded-full px-8"
+          >Getting Started</a
+        >
+      </div>
+    </section>
   </Container>
 </Layout>
