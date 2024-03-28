@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="dropdown dropdown-end z-10 md:hidden">
+  <div tabindex="0" role="button" class="btn btn-ghost rounded-btn px-0">
+    <Icon name="round-menu" size={36} />
+  </div>
+  <ul
+    tabindex="0"
+    class="menu dropdown-content z-[1] mt-4 w-48 rounded-box bg-base-100 p-2 shadow"
+  >
+    <li><a class="text-neutral">Link</a></li>
+    <li>
+      <details>
+        <summary>Parent</summary>
+        <ul class="z-10 min-w-36 rounded-t-none bg-base-100 p-1 shadow-none">
+          <li><a href="/" class="text-neutral">Link 1</a></li>
+          <li><a href="/" class="text-neutral">Link 2</a></li>
+          <li><a href="/" class="text-neutral">Link 3</a></li>
+        </ul>
+      </details>
+    </li>
+    <li><a href="/contact" class="text-neutral">Contact</a></li>
+  </ul>
+</div>
