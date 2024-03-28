@@ -8,7 +8,7 @@ import { Image } from 'astro:assets';
 <Layout title="Welcome to Astro.">
   <Container>
     <div
-      class="animate-duration-800 grid h-[100svh] animate-fade-up place-items-center content-center gap-5 md:gap-8"
+      class="animate-duration-800 grid h-[calc(100svh-var(--header-height))] animate-fade-up place-items-center content-center gap-5 md:gap-8"
     >
       <Image
         src="/stars.svg"
@@ -140,7 +140,7 @@ import { Image } from 'astro:assets';
     </section>
 
     <section>
-      <div class="grid place-items-center gap-4 rounded-xl bg-primary/10 p-10">
+      <div class="grid place-items-center gap-4 rounded-xl bg-primary/20 p-20">
         <h2 class="text-4xl">Astro + Tailwind CSS</h2>
         <p class="text-center">
           Build fast websites with the next generation static site generator

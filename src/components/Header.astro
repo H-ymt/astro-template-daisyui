@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import Menu from './Menu.astro';
+---
+
+<header class="">
+  <div class="mx-auto flex max-w-screen-lg items-center justify-between px-5">
+    <a href="/">
+      <Image
+        src="/favicon.svg"
+        alt="logo"
+        width="36"
+        height="36"
+        class="h-[var(--header-height)]"
+      />
+    </a>
+
+    <div>
+      <Menu />
+    </div>
+  </div>
+</header>
