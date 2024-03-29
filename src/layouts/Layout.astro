@@ -12,7 +12,7 @@ interface Props {
 const { title } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.url);
-const resolvedImage = new URL('/favicon.svg', Astro.url).href;
+const resolvedImage = new URL('/open-graph.png', Astro.url).href;
 ---
 
 <!doctype html>
