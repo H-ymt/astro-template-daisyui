@@ -11,8 +11,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.url);
-const resolvedImage = new URL('/open-graph.png', Astro.url).href;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const resolvedImage = new URL('/open-graph.png', Astro.site).toString();
 ---
 
 <!doctype html>
