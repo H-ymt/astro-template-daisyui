@@ -6,6 +6,10 @@
   --header-height: 64px;
 }
 
+img {
+  content-visibility: auto;
+}
+
 @layer base {
   html,
   body {

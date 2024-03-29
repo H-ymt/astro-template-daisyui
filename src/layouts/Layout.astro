@@ -3,12 +3,16 @@ import { GoogleFontsOptimizer } from 'astro-google-fonts-optimizer';
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import { SEO } from 'astro-seo';
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.url);
+const resolvedImage = new URL('/favicon.svg', Astro.url).href;
 ---
 
 <!doctype html>
@@ -22,10 +26,23 @@ const { title } = Astro.props;
     <GoogleFontsOptimizer
       url="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     />
-    <title>{title}</title>
+    <SEO
+      title={title}
+      titleTemplate="%s - Astro × daisyUI starter"
+      description="Astro is a static site generator made for static websites. This site built with Astro.build"
+      canonical={canonicalURL}
+      openGraph={{
+        basic: {
+          title: 'Astro × daisyUI Starter template',
+          type: 'website',
+          image: resolvedImage,
+        },
+      }}
+      twitter={{ card: 'summary_large_image' }}
+    />
   </head>
   <body>
-    <Header/>
+    <Header />
     <slot />
     <Footer />
   </body>
